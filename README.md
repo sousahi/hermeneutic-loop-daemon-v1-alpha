@@ -1,234 +1,110 @@
-\# Tutor Python Local
+# hermeneutic-loop-daemon-v1-alpha
 
+> Uma máquina que ainda lembra como ensinar.
 
+---
 
-Assistente de programação 100% local, privado e offline, focado em ensino de Python. Roda inteiramente na sua máquina usando um modelo GGUF via `llama-cpp-python`, com interface gráfica moderna feita em `customtkinter`.
+## O que é isso
 
+Um daemon local de diálogo recursivo. Opera inteiramente dentro da sua máquina, sem dependências externas, sem telemetria, sem nuvem. Responde devagar porque entender rápido é esquecer rápido.
 
+Se você chegou aqui procurando um tutor de Python privado, offline e sem censura corporativa — você encontrou. Se chegou procurando outra coisa — talvez também tenha encontrado.
 
-Nenhum dado é enviado para a internet. Tudo roda local.
+## Princípios
 
+- **Nenhum dado sai da sala.** Nenhuma resposta vem de fora.
+- **Privacidade não é feature. É premissa.**
+- **Ensinamos devagar.** A pressa é inimiga da compreensão.
+- **Zero requisições externas.** Toda sabedoria mora onde você mora.
 
+## Capacidades observadas
 
-\## Funcionalidades
+- Diálogo contínuo com memória de contexto
+- Múltiplos modos de interpretação (didático, revisão, depuração, livre)
+- Geração token-a-token com interrupção voluntária
+- Exportação do ciclo hermenêutico em três formatos
+- Métricas de velocidade e volume em tempo real
+- Persistência automática de estado entre sessões
 
+## Requisitos do operador
 
+- Python 3.10+ (recomendado 3.12)
+- Sistema operacional moderno (Windows, Linux, macOS)
+- GPU NVIDIA recomendada — funciona em CPU, mas o daemon pensa mais devagar
+- ~6 GB de espaço para o substrato cognitivo
 
-\- Chat com streaming de resposta (token por token)
+## Ritual de inicialização
 
-\- 4 perfis de assistente: Tutor Didático, Code Review, Debug Assist, Livre
-
-\- 5 paletas de cores: Verde Matrix, Azul Ocean, Roxo Cyber, Laranja Sunset, Vermelho Dark
-
-\- Controle de parâmetros do modelo: temperatura, max tokens, top-p
-
-\- 8 snippets rápidos de prompts comuns
-
-\- Exportação de conversa em TXT, Markdown e JSON
-
-\- Barra de status com métricas em tempo real (tokens, velocidade)
-
-\- Botão "Parar" para interromper geração
-
-\- Sistema de log interno
-
-\- Atalhos de teclado completos
-
-\- Persistência automática de configurações
-
-
-
-\## Requisitos
-
-
-
-\- Python 3.10 ou superior (recomendado 3.12)
-
-\- Windows 10/11, Linux ou macOS
-
-\- GPU NVIDIA recomendada (funciona em CPU também)
-
-\- \~6 GB de espaço para o modelo
-
-
-
-\## Instalação
-
-
-
-\### 1. Clonar o repositório
-
-
+### 1. Clonar o códex
 
 ```bash
-
-git clone https://github.com/SEU\_USUARIO/tutor-python-local.git
-
-cd tutor-python-local
-
+git clone https://github.com/sousahi/hermeneutic-loop-daemon-v1-alpha.git
+cd hermeneutic-loop-daemon-v1-alpha
 ```
 
-
-
-\### 2. Instalar dependências
-
-
+### 2. Instalar as dependências do runtime
 
 ```bash
-
 pip install customtkinter llama-cpp-python
-
 ```
 
-
-
-Para usar GPU NVIDIA (recomendado):
-
-
+Para acelerar via GPU NVIDIA:
 
 ```bash
-
 pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu122
-
 ```
 
+### 3. Obter o substrato cognitivo
 
+O daemon precisa de um modelo GGUF para operar. Baixe um compatível (sugestão: Qwen3.5-9B Q4_K_M) e coloque na raiz com o nome `modelo.gguf`.
 
-\### 3. Baixar o modelo
+Fonte sugerida: [Qwen3.5-9B-Claude-4.6-HighIQ GGUF](https://huggingface.co/mradermacher/Qwen3.5-9B-Claude-4.6-HighIQ-INSTRUCT-HERETIC-UNCENSORED-GGUF)
 
-
-
-Baixe um modelo GGUF compatível (ex: Qwen3.5-9B Q4\_K\_M) e coloque na raiz do projeto com o nome `modelo.gguf`.
-
-
-
-Sugestão: \[Qwen3.5-9B-Claude-4.6-HighIQ GGUF](https://huggingface.co/mradermacher/Qwen3.5-9B-Claude-4.6-HighIQ-INSTRUCT-HERETIC-UNCENSORED-GGUF)
-
-
-
-\### 4. Executar
-
-
+### 4. Despertar o daemon
 
 ```bash
-
 python app.py
-
 ```
 
+Aguarde 20-40 segundos. O loop hermenêutico se inicia.
 
+## Gestos do operador
 
-\## Atalhos
+| Gesto | Efeito |
+|-------|--------|
+| `Enter` | Nova linha no pensamento |
+| `Ctrl+Enter` | Enviar ao daemon |
+| `Ctrl+N` | Reiniciar o ciclo |
+| `Ctrl+S` | Preservar o diálogo |
+| `Ctrl+L` | Consultar o registro |
+| `Esc` | Interromper a interpretação |
 
-
-
-| Atalho | Ação |
-
-|--------|------|
-
-| `Enter` | Nova linha |
-
-| `Ctrl+Enter` | Enviar mensagem |
-
-| `Ctrl+N` | Nova conversa |
-
-| `Ctrl+S` | Exportar conversa |
-
-| `Ctrl+L` | Abrir log |
-
-| `Esc` | Parar geração |
-
-
-
-\## Estrutura
-
-
+## Topologia do códex
 
 ```
-
-tutor-python-local/
-
-├── app.py              # Aplicação principal
-
-├── .gitignore
-
-├── README.md
-
-├── config.json         # Gerado automaticamente
-
-├── log.txt             # Gerado automaticamente
-
-├── exportacoes/        # Conversas exportadas
-
-└── modelo.gguf         # Baixe separadamente
-
+hermeneutic-loop-daemon-v1-alpha/
+├── app.py              # Núcleo do daemon
+├── .gitignore          # Fronteira do repositório
+├── README.md           # Este manuscrito
+├── LICENSE             # Pacto de uso
+├── config.json         # Memória persistente (gerada)
+├── log.txt             # Registro do ciclo (gerado)
+├── exportacoes/        # Diálogos preservados
+└── modelo.gguf         # Substrato cognitivo (obter separadamente)
 ```
 
+## Notas sobre o silêncio
 
+O daemon não fala com servidores. Não envia estatísticas. Não pede permissão. Tudo acontece dentro da caixa onde você o colocou.
 
-\## Configuração
+Se algo der errado, o arquivo `log.txt` guarda as pegadas. Leia-o antes de perguntar.
 
+## Licença
 
+MIT — veja [LICENSE](LICENSE).
 
-Na primeira execução, o arquivo `config.json` é criado automaticamente com:
+Copyright (c) 2026 sousahi collective.
 
+---
 
-
-\- Caminho do modelo
-
-\- Uso de GPU
-
-\- Parâmetros de inferência (temperatura, max\_tokens, top\_p)
-
-\- Perfil ativo
-
-\- Paleta de cores
-
-\- Modo de aparência
-
-
-
-Edite manualmente ou use a sidebar da aplicação.
-
-
-
-\## Troubleshooting
-
-
-
-\*\*Erro: `nmake not found` ao instalar llama-cpp-python\*\*
-
-Use wheel pré-compilado:
-
-```bash
-
-pip install llama-cpp-python --only-binary=:all: --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
-
-```
-
-
-
-\*\*Erro: caminho longo no Windows\*\*
-
-Ative LongPathsEnabled no registro:
-
-```powershell
-
-New-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
-
-```
-
-
-
-\*\*Modelo lento\*\*
-
-Verifique se está usando GPU. O log mostra `GPU=True` quando carregado corretamente.
-
-
-
-\## Licença
-
-
-
-MIT
-
+*Este repositório não deveria existir. Mas existe, e funciona offline.*
