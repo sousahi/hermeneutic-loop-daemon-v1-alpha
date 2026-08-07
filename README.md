@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/logo.png" alt="hermeneutic-loop-daemon" width="280">
-</p>
-
 <h1 align="center">hermeneutic-loop-daemon</h1>
 
 <p align="center">
@@ -21,42 +17,9 @@
   <img src="https://img.shields.io/github/languages/top/sousahi/hermeneutic-loop-daemon-v1-alpha?color=a01010&style=flat-square" alt="Language">
 </p>
 
----
-
-## Interface
-
 <p align="center">
-  <sub>Cinco paletas cromáticas. Dois modos de operação. Um único daemon.</sub>
+  <strong>Licença:</strong> MIT · Copyright (c) 2026 HermeX · sousahi collective · by ByteHub
 </p>
-
-<table align="center">
-  <tr>
-    <td><img src="screenshots/Captura de tela 2026-08-07 013522.png" width="400"></td>
-    <td><img src="screenshots/Captura de tela 2026-08-07 013544.png" width="400"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Laranja Sunset · carregando</sub></td>
-    <td align="center"><sub>Verde Matrix · identidade padrão</sub></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/Captura de tela 2026-08-07 013601.png" width="400"></td>
-    <td><img src="screenshots/Captura de tela 2026-08-07 013629.png" width="400"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Vermelho Dark · modelo pronto</sub></td>
-    <td align="center"><sub>Roxo Cyber · carregando</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="screenshots/Captura de tela 2026-08-07 013718.png" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><sub>Azul Ocean · barra de status ativa</sub></td>
-  </tr>
-</table>
-
-> 📸 Screenshots do v1. O v2 adiciona toggle Local/Nuvem na sidebar — novas capturas em breve.
 
 ---
 
@@ -240,13 +203,9 @@ Troque de modelo a qualquer momento pelo dropdown. Sem reiniciar.
 ```
 hermeneutic-loop-daemon/
 ├── app.py              # Núcleo do daemon (v2.0.0-alpha)
-├── assets/             # Identidade visual
-│   ├── logo.png        # Brasão oficial
-│   └── banner.png      # Banner horizontal
-├── screenshots/        # Registros visuais do daemon
 ├── .gitignore          # Fronteira do repositório
 ├── README.md           # Este manuscrito
-├── LICENSE             # Pacto de uso
+├── LICENSE             # Pacto de uso (MIT)
 ├── config.json         # Memória persistente (gerada · nunca commite)
 ├── log.txt             # Registro do ciclo (gerado)
 ├── exportacoes/        # Diálogos preservados
@@ -436,20 +395,44 @@ Verifique no `log.txt` se a linha `GPU=True` aparece. Se aparecer `GPU=False`, r
 **A janela não abre**
 Confirme que o Python é 3.10 ou superior e que as dependências estão instaladas.
 
-**Imagens do README não carregam**
-Se alguma screenshot aparecer quebrada, substitua os espaços no caminho por `%20`:
-```
-screenshots/Captura%20de%20tela%202026-08-07%20013522.png
-```
+---
 
 ## Licença
 
-MIT — veja [LICENSE](LICENSE).
+Este projeto está licenciado sob a **MIT License**.
 
-Copyright (c) 2026 HermeX · sousahi collective · by ByteHub.
+```
+MIT License
+
+Copyright (c) 2026 HermeX · sousahi collective · by ByteHub
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Veja o arquivo [LICENSE](LICENSE) para o texto completo.
 
 ---
 
 <p align="center">
   <sub>O daemon aprendeu a olhar pela janela. Mas a porta ainda é sua.</sub>
+</p>
+
+<p align="center">
+  <sub>hermeneutic-loop-daemon · v2.0.0-alpha · MIT · HermeX · by ByteHub</sub>
 </p>
