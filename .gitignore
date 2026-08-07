@@ -1,0 +1,26 @@
+# Arquivos grandes e binarios
+*.gguf
+*.bin
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+
+# Config e logs pessoais
+config.json
+log.txt
+exportacoes/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
