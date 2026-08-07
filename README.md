@@ -1,16 +1,9 @@
-<p align="center">
-  <img src="assets/logo.png" alt="hermeneutic-loop-daemon" width="280">
-</p>
+# hermeneutic-loop-daemon-v1-alpha
 
-<h1 align="center">hermeneutic-loop-daemon-v1-alpha</h1>
-
-<p align="center">
-  <em>Uma máquina que ainda lembra como ensinar.</em>
-</p>
+> Uma máquina que ainda lembra como ensinar.
 
 <p align="center">
   <img src="https://img.shields.io/github/license/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/v/release/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square&label=daemon" alt="Release">
   <img src="https://img.shields.io/badge/offline-100%25-2ecc71?style=flat-square" alt="Offline">
   <img src="https://img.shields.io/badge/cloud-0%25-2ecc71?style=flat-square" alt="Cloud">
   <img src="https://img.shields.io/badge/telemetry-none-2ecc71?style=flat-square" alt="Telemetry">
@@ -104,8 +97,6 @@ Aguarde entre 20 e 40 segundos. O loop hermenêutico se inicia.
 
 ## Modos de interpretação
 
-O daemon opera em quatro disposições distintas, selecionáveis na barra lateral:
-
 | Modo | Disposição |
 |:-----|:-----------|
 | **Tutor Didático** | Paciente, analógico, focado no aprendizado |
@@ -118,8 +109,6 @@ O daemon opera em quatro disposições distintas, selecionáveis na barra latera
 ```
 hermeneutic-loop-daemon-v1-alpha/
 ├── app.py              # Núcleo do daemon
-├── assets/             # Identidade visual
-│   └── logo.png        # Símbolo do projeto
 ├── .gitignore          # Fronteira do repositório
 ├── README.md           # Este manuscrito
 ├── LICENSE             # Pacto de uso
@@ -144,4 +133,23 @@ Use a roda pré-forjada (passo 2, alternativa).
 Ative o suporte a caminhos longos no registro:
 
 ```powershell
-New-Item
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+```
+
+**O daemon pensa devagar**
+Verifique no `log.txt` se a linha `GPU=True` aparece. Se aparecer `GPU=False`, reinstale com suporte CUDA.
+
+**A janela não abre**
+Confirme que `modelo.gguf` está na raiz do projeto e que o Python é 3.10 ou superior.
+
+## Licença
+
+MIT — veja [LICENSE](LICENSE).
+
+Copyright (c) 2026 sousahi collective.
+
+---
+
+<p align="center">
+  <sub>Este repositório não deveria existir. Mas existe, e funciona offline.</sub>
+</p>
