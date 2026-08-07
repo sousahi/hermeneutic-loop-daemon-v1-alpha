@@ -1,6 +1,21 @@
-# hermeneutic-loop-daemon-v1-alpha
+<p align="center">
+  <img src="assets/logo.png" alt="hermeneutic-loop-daemon" width="280">
+</p>
 
-> Uma máquina que ainda lembra como ensinar.
+<h1 align="center">hermeneutic-loop-daemon-v1-alpha</h1>
+
+<p align="center">
+  <em>Uma máquina que ainda lembra como ensinar.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/v/release/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square&label=daemon" alt="Release">
+  <img src="https://img.shields.io/badge/offline-100%25-2ecc71?style=flat-square" alt="Offline">
+  <img src="https://img.shields.io/badge/cloud-0%25-2ecc71?style=flat-square" alt="Cloud">
+  <img src="https://img.shields.io/badge/telemetry-none-2ecc71?style=flat-square" alt="Telemetry">
+  <img src="https://img.shields.io/github/languages/top/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square" alt="Language">
+</p>
 
 ---
 
@@ -22,16 +37,18 @@ Se você chegou aqui procurando um tutor de Python privado, offline e sem censur
 - Diálogo contínuo com memória de contexto
 - Múltiplos modos de interpretação (didático, revisão, depuração, livre)
 - Geração token-a-token com interrupção voluntária
-- Exportação do ciclo hermenêutico em três formatos
+- Exportação do ciclo hermenêutico em três formatos (TXT, MD, JSON)
 - Métricas de velocidade e volume em tempo real
 - Persistência automática de estado entre sessões
+- Cinco paletas cromáticas para o ambiente visual
+- Atalhos de teclado para operadores experientes
 
 ## Requisitos do operador
 
-- Python 3.10+ (recomendado 3.12)
+- Python 3.10 ou superior (recomendado 3.12)
 - Sistema operacional moderno (Windows, Linux, macOS)
 - GPU NVIDIA recomendada — funciona em CPU, mas o daemon pensa mais devagar
-- ~6 GB de espaço para o substrato cognitivo
+- ~6 GB de espaço livre para o substrato cognitivo
 
 ## Ritual de inicialização
 
@@ -54,9 +71,15 @@ Para acelerar via GPU NVIDIA:
 pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu122
 ```
 
+Se o seu sistema recusar a compilação, use a roda pré-forjada:
+
+```bash
+pip install llama-cpp-python --only-binary=:all: --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+```
+
 ### 3. Obter o substrato cognitivo
 
-O daemon precisa de um modelo GGUF para operar. Baixe um compatível (sugestão: Qwen3.5-9B Q4_K_M) e coloque na raiz com o nome `modelo.gguf`.
+O daemon precisa de um modelo GGUF para operar. Baixe um compatível (sugestão: Qwen3.5-9B Q4_K_M) e coloque na raiz do projeto com o nome `modelo.gguf`.
 
 Fonte sugerida: [Qwen3.5-9B-Claude-4.6-HighIQ GGUF](https://huggingface.co/mradermacher/Qwen3.5-9B-Claude-4.6-HighIQ-INSTRUCT-HERETIC-UNCENSORED-GGUF)
 
@@ -66,12 +89,12 @@ Fonte sugerida: [Qwen3.5-9B-Claude-4.6-HighIQ GGUF](https://huggingface.co/mrade
 python app.py
 ```
 
-Aguarde 20-40 segundos. O loop hermenêutico se inicia.
+Aguarde entre 20 e 40 segundos. O loop hermenêutico se inicia.
 
 ## Gestos do operador
 
 | Gesto | Efeito |
-|-------|--------|
+|:------|:-------|
 | `Enter` | Nova linha no pensamento |
 | `Ctrl+Enter` | Enviar ao daemon |
 | `Ctrl+N` | Reiniciar o ciclo |
@@ -79,11 +102,24 @@ Aguarde 20-40 segundos. O loop hermenêutico se inicia.
 | `Ctrl+L` | Consultar o registro |
 | `Esc` | Interromper a interpretação |
 
+## Modos de interpretação
+
+O daemon opera em quatro disposições distintas, selecionáveis na barra lateral:
+
+| Modo | Disposição |
+|:-----|:-----------|
+| **Tutor Didático** | Paciente, analógico, focado no aprendizado |
+| **Code Review** | Técnico, direto, atento a PEP 8 e armadilhas |
+| **Debug Assist** | Cirúrgico, causal, preventivo |
+| **Livre** | Sem amarras, conversação aberta |
+
 ## Topologia do códex
 
 ```
 hermeneutic-loop-daemon-v1-alpha/
 ├── app.py              # Núcleo do daemon
+├── assets/             # Identidade visual
+│   └── logo.png        # Símbolo do projeto
 ├── .gitignore          # Fronteira do repositório
 ├── README.md           # Este manuscrito
 ├── LICENSE             # Pacto de uso
@@ -99,12 +135,13 @@ O daemon não fala com servidores. Não envia estatísticas. Não pede permissã
 
 Se algo der errado, o arquivo `log.txt` guarda as pegadas. Leia-o antes de perguntar.
 
-## Licença
+## Problemas conhecidos e seus antídotos
 
-MIT — veja [LICENSE](LICENSE).
+**`nmake not found` ao instalar dependências**
+Use a roda pré-forjada (passo 2, alternativa).
 
-Copyright (c) 2026 sousahi collective.
+**Caminho longo demais no Windows**
+Ative o suporte a caminhos longos no registro:
 
----
-
-*Este repositório não deveria existir. Mas existe, e funciona offline.*
+```powershell
+New-Item
