@@ -9,12 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/sousahi/hermeneutic-loop-daemon-v1-alpha?color=a01010&style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/vers%C3%A3o-2.0.0--alpha-a01010?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/badge/modo-local%20%7C%20nuvem-a01010?style=flat-square" alt="Mode">
-  <img src="https://img.shields.io/badge/telemetry-none-a01010?style=flat-square" alt="Telemetry">
-  <img src="https://img.shields.io/badge/lock--in-zero-a01010?style=flat-square" alt="Lock-in">
-  <img src="https://img.shields.io/github/languages/top/sousahi/hermeneutic-loop-daemon-v1-alpha?color=a01010&style=flat-square" alt="Language">
+  <strong>v2.0.0-alpha</strong> · <strong>MIT</strong> · <strong>Local | Nuvem</strong> · <strong>Zero Telemetria</strong> · <strong>Zero Lock-in</strong> · <strong>Python</strong>
 </p>
 
 <p align="center">
@@ -266,7 +261,6 @@ Em ambos os modos, o arquivo `log.txt` guarda as pegadas. Leia-o antes de pergun
 - **Sidebar reorganizada** — nova seção "MODO DE OPERAÇÃO" no topo, acima de Perfil
 - **Boas-vindas atualizadas** — mostram modo ativo ao iniciar
 - **Largura da sidebar** — de 280px para 300px (acomoda novos controles)
-- **Paleta de badges** — de verde (`#2ecc71`) para vermelho sangue (`#a01010`), alinhando com identidade visual
 
 #### Mantido
 
