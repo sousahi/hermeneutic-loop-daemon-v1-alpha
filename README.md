@@ -1,14 +1,67 @@
-# hermeneutic-loop-daemon-v1-alpha
+<p align="center">
+  <img src="assets/logo.png" alt="hermeneutic-loop-daemon" width="280">
+</p>
 
-> Uma máquina que ainda lembra como ensinar.
+<h1 align="center">hermeneutic-loop-daemon-v1-alpha</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/offline-100%25-2ecc71?style=flat-square" alt="Offline">
-  <img src="https://img.shields.io/badge/cloud-0%25-2ecc71?style=flat-square" alt="Cloud">
-  <img src="https://img.shields.io/badge/telemetry-none-2ecc71?style=flat-square" alt="Telemetry">
-  <img src="https://img.shields.io/github/languages/top/sousahi/hermeneutic-loop-daemon-v1-alpha?color=2ecc71&style=flat-square" alt="Language">
+  <em>Sua IA. Suas regras.</em>
 </p>
+
+<p align="center">
+  <sub>Uma máquina que ainda lembra como ensinar.</sub>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/sousahi/hermeneutic-loop-daemon-v1-alpha?color=a01010&style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/offline-100%25-a01010?style=flat-square" alt="Offline">
+  <img src="https://img.shields.io/badge/cloud-0%25-a01010?style=flat-square" alt="Cloud">
+  <img src="https://img.shields.io/badge/telemetry-none-a01010?style=flat-square" alt="Telemetry">
+  <img src="https://img.shields.io/github/languages/top/sousahi/hermeneutic-loop-daemon-v1-alpha?color=a01010&style=flat-square" alt="Language">
+</p>
+
+---
+
+## Interface
+
+<p align="center">
+  <sub>Registros visuais do daemon em operação.</sub>
+</p>
+
+<table align="center">
+  <tr>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013522.png" width="400"></td>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013544.png" width="400"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Tela inicial</sub></td>
+    <td align="center"><sub>Início do diálogo</sub></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013601.png" width="400"></td>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013629.png" width="400"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Resposta em tempo real</sub></td>
+    <td align="center"><sub>Ciclo completo</sub></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013718.png" width="400"></td>
+    <td><img src="screenshots/Captura de tela 2026-08-07 013850.png" width="400"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Modo alternativo</sub></td>
+    <td align="center"><sub>Preservação do diálogo</sub></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="screenshots/Captura de tela 2026-08-07 013921.png" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><sub>Métricas do daemon</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -109,6 +162,10 @@ Aguarde entre 20 e 40 segundos. O loop hermenêutico se inicia.
 ```
 hermeneutic-loop-daemon-v1-alpha/
 ├── app.py              # Núcleo do daemon
+├── assets/             # Identidade visual
+│   ├── logo.png        # Brasão oficial
+│   └── banner.png      # Banner horizontal
+├── screenshots/        # Registros visuais do daemon
 ├── .gitignore          # Fronteira do repositório
 ├── README.md           # Este manuscrito
 ├── LICENSE             # Pacto de uso
@@ -142,11 +199,17 @@ Verifique no `log.txt` se a linha `GPU=True` aparece. Se aparecer `GPU=False`, r
 **A janela não abre**
 Confirme que `modelo.gguf` está na raiz do projeto e que o Python é 3.10 ou superior.
 
+**Imagens do README não carregam**
+Se alguma screenshot aparecer quebrada, substitua os espaços no caminho por `%20`:
+```
+screenshots/Captura%20de%20tela%202026-08-07%20013522.png
+```
+
 ## Licença
 
 MIT — veja [LICENSE](LICENSE).
 
-Copyright (c) 2026 sousahi collective.
+Copyright (c) 2026 sousahi collective · by ByteHub.
 
 ---
 
